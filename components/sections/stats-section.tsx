@@ -1,4 +1,3 @@
-import React from "react"
 import Image from "next/image"
 
 async function StatsSection() {
@@ -26,10 +25,10 @@ async function StatsSection() {
   ]
 
   return (
-    <section className="relative h-[50vh] md:h-[60vh] lg:h-[80vh] max-h-[90vh] w-full overflow-x-visible bg-black">
-      <div className="w-full h-32 absolute top-0 z-10">
+    <section className="relative h-[50vh] md:h-[60vh] lg:h-[80vh] max-h-[90vh] w-full overflow-visible bg-black mt-0">
+      <div className="w-full h-32 absolute top-[10vw] z-10">
         <Image
-          src={"/stats-upper.svg"}
+          src={"/stats-upper-2.svg"}
           alt="glass design"
           className="w-full -mt-[25%] "
           width={100}
