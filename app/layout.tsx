@@ -7,11 +7,6 @@ export const poppins = Poppins({
   weight: ["400", "500", "600"],
 });
 
-export const kanit = Kanit({
-  weight: "800",
-  subsets: ["latin"],
-  display: "swap",
-});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 const kanit = Kanit({
-  weight: ["400", "700"],
+  weight: ["400", "700", "800"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-kanit",

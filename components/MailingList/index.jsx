@@ -1,4 +1,4 @@
-import { kanit, poppins } from "@/app/layout";
+import { poppins } from "@/app/layout";
 import Image from "next/image";
 
 const MailingList = () => {
@@ -42,7 +42,7 @@ const MailingList = () => {
         />
       </div>
 
-      <div className={`mt-[180px] md:mt-[250px] w-full flex flex-col items-center px-4 md:px-6 relative z-30 ${kanit.className}`}>
+      <div className={`mt-[180px] md:mt-[250px] w-full flex flex-col items-center px-4 md:px-6 relative z-30 font-kanit`}>
         <div className="relative w-full max-w-[850px]">
           <div className="relative w-full z-20 bg-[linear-gradient(97deg,_#570089_-1.22%,_#A200FF_49.96%,_#210035_142.76%)] border-[4px] md:border-[11px] border-white rounded-[20px] p-2 md:p-3 shadow-2xl">
             <div className="absolute top-0 left-0 -translate-x-[40%] -translate-y-[35%] w-[200px] md:w-[clamp(370px,8vw,100px)] aspect-[2.2/1] z-30 pointer-events-none transform rotate-[-33.74]">
@@ -107,7 +107,7 @@ const MailingList = () => {
                   text-gray-700
                   placeholder:text-gray-400
                   font-light
-                  ${kanit.className}
+                  font-kanit
                 `}
               />
 
