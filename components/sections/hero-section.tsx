@@ -81,19 +81,9 @@ const Hero = () => {
 				</p>
 			</div>
 
-			<div className="absolute w-full h-135 sm:top-[20vh] top-[28vh] z-20">
-				<Image
-					src="/hb4_logo.svg"
-					alt="HackByte 4 logo"
-					fill
-					className="object-contain object-top"
-					priority
-				/>
-			</div>
-
 			<div className="relative md:h-[105vh] sm:h-[85vh] h-[65vh] sm:top-4 -top-3 -left-5 aspect-video z-0">
 				<Image
-					src="/Main Page Broken Effect.svg"
+					src="/Main Page Broken Effect logo.svg"
 					alt="Broken effect background"
 					fill
 					className="object-contain"
@@ -111,7 +101,7 @@ const Hero = () => {
 				/>
 			</div>
 
-			<div className={`absolute flex bg-pink-500/500 md:-right-5 right-10 sm:bottom-32 bottom-25 font-kanit h-40 w-[27vw] z-20`}>
+			<div className={`absolute flex bg-pink-500/500 md:-right-5 right-10 sm:bottom-32 bottom-50 font-kanit h-40 w-[27vw] z-20`}>
 				<Link href="/register" className={`absolute text-[#62009B] lg:w-80 md:w-70 sm:w-65 w-55  p-5 lg:right-35 md:right-28 sm:right-5 right-3 bg-[#FFEE00] md:h-16 sm:h-14 h-10 rounded-full border-[#FFD620] border-4 md:text-3xl text-2xl font-extrabold flex items-center justify-center bottom-0 hover:bg-[#FFC300B8] hover:border-[#FFD620] transition-colors duration-300 cursor-pointer z-20`}>
 					REGISTER NOW
 				</Link>
@@ -126,7 +116,7 @@ const Hero = () => {
 				</div>
 			</div>
 
-			<div className={`absolute text-3xl font-kanit bg-pink-400/300 bottom-35 lg:scale-100 sm:-left-8 md:-left-3 sm:scale-70 lg:left-10 md:scale-80 scale-50 -left-17 text-black`}>
+			<div className={`absolute text-3xl font-kanit bg-pink-400/300 bottom-20 sm:bottom-35 lg:scale-100 sm:-left-8 md:-left-3 sm:scale-70 lg:left-10 md:scale-80 scale-50 -left-17 text-black`}>
 				<div className="text-white text-stroke-brand-thick font-extrabold text-4xl">When:</div>
 				<div className="text-[#62009B] text-stroke-white-thick font-extrabold text-5xl">3-5 April,2026</div>
 				<div className="flex gap-3">
