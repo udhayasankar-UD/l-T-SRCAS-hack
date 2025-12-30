@@ -82,8 +82,6 @@ export default function Gallery() {
         </div>
         <div className="h-[300px] w-full max-w-2xl border-4 border-white rounded-3xl bg-black"></div>
       </div>
-
-      <Footer />
     </section>
   )
 }
