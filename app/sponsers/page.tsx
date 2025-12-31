@@ -7,20 +7,34 @@ import { useState, useMemo } from "react"
 // Sponsor data
 const title_sponsors = [
 	{
-		name: "MLH",
-		logo: "/mlh.webp",
-		description: "The MX Master Series is expertly designed or users, empowering coders to unleash productivity and performance during intense coding marathons.",
-		site: "https://mlh.io",
+		name: "WebDock.io",
+		logo: "/webdock.png",
+		description: "Webdock.io is revolutionizing VPS hosting with a faster, more affordable, and developer-friendly platform. Built from the ground up, Webdock offers a powerful yet simple hosting experience with a custom control panel, predictable billing, and blazing-fast performance.",
+		site: "https://webdock.io/en",
 	},
 	{
-		name: "Devfolio",
-		logo: "/devfolio.png",
-		description: "The MX Master Series is expertly designed or users, empowering coders to unleash productivity and performance during intense coding marathons.",
-		site: "https://devfolio.co",
+		name: "BenQ",
+		logo: "/benq.png",
+		description: "BenQ is a world-leading human technology and solutions provider driven by the corporate vision of 'Bringing Enjoyment ‘N’ Quality to Life' to elevate and enrich the aspects of life that matter most to people today – lifestyle, business, healthcare, and education.",
+		site: "https://www.benq.com/en-in/campaign/best-coding-monitor-for-programmers.html?utm_source=event&utm_medium=referral&utm_campaign=wed_programming_webtraffic_others_programming%20series_hackbyte_traffic_202504",
 	}
 ]
 
 const sponsors = [
+	{
+		name: "MLH",
+		category: "Platform Partner",
+		sponsorimgsrc: "/mlh.webp",
+		site: "https://mlh.io/",
+		stickerimgsrc: "track_sponser.svg",
+	},
+	{
+		name: "Devfolio",
+		category: "Platform Partner",
+		sponsorimgsrc: "/devfolio.png",
+		site: "https://devfolio.co/",
+		stickerimgsrc: "track_sponser.svg",
+	},
 	{
 		name: "GitHub",
 		category: "Gold Sponsor",
@@ -250,7 +264,7 @@ const SponsorCard = ({ name, sponsorimgsrc, category, site, stickerimgsrc }: { n
 					<p className="font-kanit text-3xl font-bold">
 						{name}
 					</p>
-					<p className="text-[#F5D024] font-medium text-lg">
+					<p className="text-white/80 font-bold text-xl">
 						{category}
 					</p>
 				</div>
@@ -265,7 +279,7 @@ export default function SponsorsPage() {
 	// Memoize sponsor grids to avoid recalculation
 	const sponsorGrid = useMemo(() => (
 		<div className="flex gap-20 flex-col">
-			<div className="flex items-center w-screen sm:justify-between md:flex-col flex-col lg:flex-col md:gap-20 xl:gap-0 -gap-30 xl:flex-row md:px-90 lg:px-18 xl:px-25 px-0">
+			<div className="flex items-center -mt-20 sm:mt-0 w-screen sm:justify-between md:flex-col flex-col lg:flex-col md:gap-20 xl:gap-0 -gap-30 xl:flex-row md:px-90 lg:px-18 xl:px-35 px-0">
 				{title_sponsors.map((sponsor) => (
 					<TitleSponsorCard
 						key={sponsor.name}
@@ -297,7 +311,7 @@ export default function SponsorsPage() {
 
 	return (
 		<div className="w-screen min-h-svh overflow-x-hidden">
-			<div className="-z-10 sm:h-[95vh] h-[55vh] w-screen relative overflow-hidden">
+			<div className="-z-10 sm:h-[95vh] h-[35vh] w-screen relative overflow-hidden">
 				<Image
 					src="/sponsers_bg.svg"
 					alt="Sponsors background"
@@ -322,7 +336,7 @@ export default function SponsorsPage() {
 					</div>
 
 					{/* Right side - HB4 Logo */}
-					<div className="w-[35%] sm:self-center self-end sm:w-[30%] md:w-[25%] lg:w-[25%] xl:w-[10%]sm:mr-40 md:mr-15 lg:mr-30 xl:mr-40">
+					<div className="w-[35%] sm:block hidden sm:self-center self-end sm:w-[30%] md:w-[25%] lg:w-[25%] xl:w-[10%]sm:mr-40 md:mr-15 lg:mr-30 xl:mr-40">
 						<Image
 							src="/hb4 logo sponserspage.svg"
 							alt="HackByte 4.0 Logo"
@@ -335,12 +349,12 @@ export default function SponsorsPage() {
 				</div>
 			</div>
 
-			<div className="min-h-screen w-screen bg-gradient-to-b from-black to-[#34085B] flex flex-col items-center py-16">
-				<div className="w-full h-32 absolute z-10">
+			<div className="min-h-screen w-screen bg-gradient-to-b from-black relative to-[#34085B] flex flex-col items-center pt-16 pb-30">
+				<div className="w-full h-32 absolute z-10 bg-amber-300/300 -top-[14.9vw]">
 					<Image
 						src="/stats-upper-2.svg"
 						alt="Decorative glass design"
-						className="w-full -mt-[25%]"
+						className="w-full object-cover object-top"
 						width={100}
 						height={100}
 						loading="lazy"
@@ -348,7 +362,7 @@ export default function SponsorsPage() {
 				</div>
 
 				{/* Toggle Button */}
-				<div className="w-full flex items-start justify-start sm:pt-35 pt-15 z-20 px-8 md:px-20">
+				<div className="w-full flex items-start justify-start sm:pt-50 pt-15 z-20 px-8 md:px-20">
 					<div className="flex items-center bg-[#3D1A5C] rounded-full border border-purple-700/50 h-10">
 						<button
 							onClick={() => setActiveTab("sponsors")}

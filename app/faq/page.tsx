@@ -128,7 +128,7 @@ export default function FaqPage() {
 								className="font-poppins flex gap-3 items-center text-white sm:text-lg text-md font-medium w-fit"
 							>
 								<Mail />
-								<span>theprogclub@iiitdmj.ac.in</span>
+								<span>hackbyte@iiitdmj.ac.in</span>
 							</Link>
 						</div>
 
