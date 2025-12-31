@@ -5,10 +5,10 @@ import Image from "next/image"
 
 export default function Gallery() {
   return (
-    <section className="w-full min-h-screen py-12 relative bg-linear-to-bl from-[#4E0088] to-[#180029] overflow-hidden">
+    <section className="w-full min-h-screen py-0 lg:py-12 relative bg-linear-to-bl from-[#4E0088] to-[#180029] overflow-hidden">
       <RedBand />
 
-      <div className="w-full h-full top-36 z-20 px-4 pointer-events-none absolute">
+      <div className="w-full h-full top-36 z-0 px-4 pointer-events-none absolute">
         <div className="relative size-full">
           <div className="absolute left-0 top-0">
             <Image
@@ -43,7 +43,7 @@ export default function Gallery() {
           </div>
         </div>
       </div>
-      <div className="z-10 w-full mt-6 lg:mt-32 px-4 md:px-12 xl:px-20">
+      <div className="z-10 w-full mt-12 lg:mt-32 px-4 md:px-20 xl:px-20">
         <div className="size-full rounded-3xl overflow-hidden">
           <GalleryGrid />
         </div>
