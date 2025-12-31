@@ -1,4 +1,3 @@
-import { poppins } from "@/app/layout";
 import Image from "next/image";
 
 const MailingList = () => {
