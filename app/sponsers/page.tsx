@@ -133,63 +133,63 @@ const inKindSponsors = [
 		name: "CodeCrafters",
 		category: "In Kind Sponsor",
 		sponsorimgsrc: "/codecrafters.jpg",
-		site: "#",
+		site: "https://codecrafters.io/",
 		stickerimgsrc: "track_sponser.svg",
 	},
 	{
 		name: "The Dev Army",
 		category: "In Kind Sponsor",
 		sponsorimgsrc: "/thedevarmy.png",
-		site: "#",
+		site: "https://thedevarmy.com/",
 		stickerimgsrc: "track_sponser.svg",
 	},
 	{
 		name: "Balsamiq",
 		category: "In Kind Sponsor",
 		sponsorimgsrc: "/balsamiq.png",
-		site: "#",
+		site: "https://balsamiq.com",
 		stickerimgsrc: "track_sponser.svg",
 	},
 	{
 		name: "Wolfram",
 		category: "In Kind Sponsor",
 		sponsorimgsrc: "/wolfram.webp",
-		site: "#",
+		site: "https://www.wolfram.com/wolfram-one/",
 		stickerimgsrc: "track_sponser.svg",
 	},
 	{
 		name: "Commudle",
 		category: "In Kind Sponsor",
 		sponsorimgsrc: "/commudle.png",
-		site: "#",
+		site: "https://commudle.com/",
 		stickerimgsrc: "track_sponser.svg",
 	},
 	{
 		name: "Hyperbeam",
 		category: "In Kind Sponsor",
 		sponsorimgsrc: "/hyperbeam.png",
-		site: "#",
+		site: "https://hyperbeam.com/",
 		stickerimgsrc: "track_sponser.svg",
 	},
 	{
 		name: "TechLeads",
 		category: "In Kind Sponsor",
 		sponsorimgsrc: "/techleads.jpg",
-		site: "#",
+		site: "https://www.linkedin.com/company/officialtechleads/",
 		stickerimgsrc: "track_sponser.svg",
 	},
 	{
 		name: "Keploy",
 		category: "In Kind Sponsor",
 		sponsorimgsrc: "/keploy.png",
-		site: "#",
+		site: "https://keploy.io/",
 		stickerimgsrc: "track_sponser.svg",
 	},
 	{
 		name: "Appwrite",
 		category: "In Kind Sponsor",
 		sponsorimgsrc: "/appwrite.png",
-		site: "#",
+		site: "https://appwrite.io/",
 		stickerimgsrc: "track_sponser.svg",
 	},
 ]
@@ -368,8 +368,8 @@ export default function SponsorsPage() {
 							onClick={() => setActiveTab("sponsors")}
 							aria-pressed={activeTab === "sponsors"}
 							className={`px-6 md:px-8 h-full rounded-full font-semibold text-sm md:text-lg transition-all duration-300 ${activeTab === "sponsors"
-									? "bg-[#9E00F9] text-white shadow-lg"
-									: "bg-transparent text-purple-300 hover:text-white"
+								? "bg-[#9E00F9] text-white shadow-lg"
+								: "bg-transparent text-purple-300 hover:text-white"
 								}`}
 						>
 							Sponsors
@@ -378,8 +378,8 @@ export default function SponsorsPage() {
 							onClick={() => setActiveTab("inkind")}
 							aria-pressed={activeTab === "inkind"}
 							className={`px-6 md:px-8 h-full rounded-full font-semibold text-sm md:text-lg transition-all duration-300 ${activeTab === "inkind"
-									? "bg-[#9E00F9] text-white shadow-lg"
-									: "bg-transparent text-purple-300 hover:text-white"
+								? "bg-[#9E00F9] text-white shadow-lg"
+								: "bg-transparent text-purple-300 hover:text-white"
 								}`}
 						>
 							In Kind Sponsors
