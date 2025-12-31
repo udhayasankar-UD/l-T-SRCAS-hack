@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useMemo } from "react"
+import FadeInView from "@/components/FadeInView"
 
 // Sponsor data
 const title_sponsors = [
@@ -197,79 +198,83 @@ const inKindSponsors = [
 // Memoized components to prevent unnecessary re-renders
 const TitleSponsorCard = ({ name, logo, description, site }: { name: string; logo: string; description: string; site: string }) => {
 	return (
-		<Link href={site} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center w-130 sm:scale-100 md:scale-100 scale-65 transition-transform hover:scale-105">
-			<div className="h-66 bg-white w-[90%] flex items-center justify-center rounded-2xl">
-				<Image
-					src={logo}
-					alt={`${name} logo`}
-					width={200}
-					height={100}
-					className="w-full h-auto rounded-2xl object-contain object-center"
-					loading="lazy"
-				/>
-			</div>
+		<FadeInView>
+			<Link href={site} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center w-130 sm:scale-100 md:scale-100 scale-65 transition-transform hover:scale-105">
+				<div className="h-66 bg-white w-[90%] flex items-center justify-center rounded-2xl">
+					<Image
+						src={logo}
+						alt={`${name} logo`}
+						width={200}
+						height={100}
+						className="w-full h-auto rounded-2xl object-contain object-center"
+						loading="lazy"
+					/>
+				</div>
 
-			<div className="bg-gradient-to-b border-12 rounded-2xl border-white from-[#9E00F9] to-[#7B00C7] px-14 pt-8 pb-10 flex flex-col font-kanit items-center text-center -mt-2">
-				<h3 className="text-6xl font-extrabold text-white mb-3 text-stroke-black-thick">
-					{name}
-				</h3>
-				<p className="text-white/90 text-lg leading-tight">
-					{description}
-				</p>
-			</div>
+				<div className="bg-gradient-to-b border-12 rounded-2xl border-white from-[#9E00F9] to-[#7B00C7] px-14 pt-8 pb-10 flex flex-col font-kanit items-center text-center -mt-2">
+					<h3 className="text-6xl font-extrabold text-white mb-3 text-stroke-black-thick">
+						{name}
+					</h3>
+					<p className="text-white/90 text-lg leading-tight">
+						{description}
+					</p>
+				</div>
 
-			<div className="w-[105%] relative -mt-10">
-				<Image
-					src="/title sponser.svg"
-					alt="Title Sponsor"
-					width={500}
-					height={100}
-					className="w-full h-auto object-contain object-center"
-					loading="lazy"
-				/>
-			</div>
-		</Link>
+				<div className="w-[105%] relative -mt-10">
+					<Image
+						src="/title sponser.svg"
+						alt="Title Sponsor"
+						width={500}
+						height={100}
+						className="w-full h-auto object-contain object-center"
+						loading="lazy"
+					/>
+				</div>
+			</Link>
+		</FadeInView>
 	)
 }
 
 const SponsorCard = ({ name, sponsorimgsrc, category, site, stickerimgsrc }: { name: string; sponsorimgsrc: string; category: string; site: string; stickerimgsrc: string }) => {
 	return (
-		<Link
-			href={site}
-			target="_blank"
-			rel="noopener noreferrer"
-			className="flex flex-col items-center w-80 transition-transform hover:scale-105"
-		>
-			<div className="h-64 md:h-64 bg-white w-[90%] flex items-center justify-center rounded-2xl">
-				<Image
-					src={sponsorimgsrc}
-					alt={`${name} logo`}
-					width={200}
-					height={100}
-					className="object-contain max-h-full"
-					loading="lazy"
-				/>
-			</div>
-
-			<div className="w-[101%] relative -mt-10">
-				<Image
-					src={stickerimgsrc}
-					alt={`${category} badge`}
-					width={500}
-					height={100}
-					className="w-full h-auto object-contain object-center"
-					loading="lazy"
-				/>
-				<div className="top-0 absolute flex flex-col justify-center px-10 h-full w-full">
-					<p className="font-kanit text-3xl font-bold">
-						{name}
-					</p>
-					<p className="text-white/80 font-bold text-xl">
-						{category}
-					</p>
+		<FadeInView delay={0.1}>
+			<Link
+				href={site}
+				target="_blank"
+				rel="noopener noreferrer"
+				className="flex flex-col items-center w-80 transition-transform hover:scale-105"
+			>
+				<div className="h-64 md:h-64 bg-white w-[90%] flex items-center justify-center rounded-2xl">
+					<Image
+						src={sponsorimgsrc}
+						alt={`${name} logo`}
+						width={200}
+						height={100}
+						className="object-contain max-h-full"
+						loading="lazy"
+					/>
 				</div>
-			</div>
-		</Link>
+
+				<div className="w-[101%] relative -mt-10">
+					<Image
+						src={stickerimgsrc}
+						alt={`${category} badge`}
+						width={500}
+						height={100}
+						className="w-full h-auto object-contain object-center"
+						loading="lazy"
+					/>
+					<div className="top-0 absolute flex flex-col justify-center px-10 h-full w-full">
+						<p className="font-kanit text-3xl font-bold">
+							{name}
+						</p>
+						<p className="text-white/80 font-bold text-xl">
+							{category}
+						</p>
+					</div>
+				</div>
+			</Link>
+		</FadeInView>
 	)
 }
 
@@ -279,7 +284,7 @@ export default function SponsorsPage() {
 	// Memoize sponsor grids to avoid recalculation
 	const sponsorGrid = useMemo(() => (
 		<div className="flex gap-20 flex-col">
-			<div className="flex items-center -mt-20 sm:mt-0 w-screen sm:justify-between md:flex-col flex-col lg:flex-col md:gap-20 xl:gap-0 -gap-30 xl:flex-row md:px-90 lg:px-18 xl:px-35 px-0">
+			<div className="flex items-center -mt-20 sm:mt-15 w-screen sm:justify-between md:flex-col flex-col lg:flex-col md:gap-20 xl:gap-0 -gap-30 xl:flex-row md:px-90 lg:px-18 xl:px-35 px-0">
 				{title_sponsors.map((sponsor) => (
 					<TitleSponsorCard
 						key={sponsor.name}
@@ -322,17 +327,19 @@ export default function SponsorsPage() {
 				/>
 
 				{/* Past Partners Section */}
-				<div className="absolute inset-0 flex sm:flex-row w-screen flex-col items-center sm:justify-between justify-center lg:px-0 xl:gap-40">
+				<div className="absolute inset-0 flex sm:flex-row w-screen flex-col items-center sm:justify-between justify-center lg:px-0 xl:gap-40 z-20">
 					{/* Left side - Past Partners text */}
-					<div className="w-[90%] sm:self-center self-start sm:w-[70%]  md:w-[70%] lg:w-[60%] xl:w-[60%] z-20">
-						<Image
-							src="/Past Partners who Supported.svg"
-							alt="Past Partners who Supported"
-							width={574}
-							height={158}
-							className="w-full h-auto object-contain object-center"
-							priority
-						/>
+					<div className="w-[90%] sm:self-center self-start sm:w-[70%] md:w-[70%] lg:w-[60%] xl:w-[60%] z-20">
+						<FadeInView delay={0.2}>
+							<Image
+								src="/Past Partners who Supported.svg"
+								alt="Past Partners who Supported"
+								width={574}
+								height={158}
+								className="w-full h-auto object-contain object-center"
+								priority
+							/>
+						</FadeInView>
 					</div>
 
 					{/* Right side - HB4 Logo */}
@@ -361,8 +368,7 @@ export default function SponsorsPage() {
 					/>
 				</div>
 
-				{/* Toggle Button */}
-				<div className="w-full flex items-start justify-start sm:pt-50 pt-15 z-20 px-8 md:px-20">
+				<div className="w-full flex items-start justify-start sm:pt-50 pt-15 z-20 px-8 md:px-40">
 					<div className="flex items-center bg-[#3D1A5C] rounded-full border border-purple-700/50 h-10">
 						<button
 							onClick={() => setActiveTab("sponsors")}
