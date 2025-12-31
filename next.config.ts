@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
           "https://drive.google.com/file/d/1Zu56vhpSGQQDViqBLSbrVxeTxNf2F9Wl/view",
         permanent: false,
       },
+      {
+        source: "/chat",
+        destination:
+          "https://discord.com/invite/NTueHjdPn8",
+        permanent: false,
+      },
     ];
   },
 };
