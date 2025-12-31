@@ -29,7 +29,7 @@ export function GalleryGrid() {
   ]
 
   return (
-    <div className="w-full md:max-w-[80%] mx-auto pt-6">
+    <div className="w-full md:max-w-[80%] mx-auto pt-2">
       <div className="grid grid-cols-3 auto-rows-[100px] md:auto-rows-[250px] gap-1">
         {layout.map((item, i) => (
           <div

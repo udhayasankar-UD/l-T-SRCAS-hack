@@ -61,6 +61,10 @@ body {
   -webkit-text-stroke: 2px #ffffff;
   paint-order: stroke fill;
 }
+.text-stroke-black-thick {
+  -webkit-text-stroke: 14px #000000;
+  paint-order: stroke fill;
+}
 
 /* View Transitions */
 ::view-transition-old(root),

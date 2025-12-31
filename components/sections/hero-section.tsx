@@ -36,7 +36,7 @@ const Hero = () => {
 
 			<div className={`absolute sm:top-35 top-5 sm:left-0 -left-2 z-20 h-40 font-kanit sm:scale-80 scale-70 lg:scale-100 md:scale-90 lg:left-15 md:left-5 bg-blue-700/700`}>
 				<div className="bg-blue-400/400 left-0 w-full flex sm:hidden items-center justify-left gap-5 pb-6">
-					<Link href="https://www.linkedin.com/company/bitbyte-tpc/posts/?feedView=all" className="relative w-7 h-7">
+					<Link href="https://www.linkedin.com/company/bitbyte-tpc" className="relative w-7 h-7">
 						<Image
 							src="/linkdin.svg"
 							alt="LinkedIn"
@@ -45,7 +45,7 @@ const Hero = () => {
 							priority
 						/>
 					</Link>
-					<Link href="https://www.instagram.com/hackbyte.tpc/" className="relative w-7 h-7">
+					<Link href="https://www.instagram.com/hackbyte.tpc" className="relative w-7 h-7">
 						<Image
 							src="/insta.svg"
 							alt="Instagram"
@@ -63,7 +63,7 @@ const Hero = () => {
 							priority
 						/>
 					</Link>
-					<Link href="https://discord.com/invite/6RDuTPnAME" className="relative w-9 h-9">
+					<Link href="https://discord.com/invite/NTueHjdPn8" className="relative w-9 h-9">
 						<Image
 							src="/discord.svg"
 							alt="Discord"
@@ -73,12 +73,12 @@ const Hero = () => {
 						/>
 					</Link>
 				</div>
-				<p className="text-white text-stroke-brand-thick font-extrabold text-4xl">
+				<h2 className="text-white text-stroke-brand-thick font-extrabold text-4xl">
 					Our Theme
-				</p>
-				<p className="italic text-3xl text-[#FFF7E591] font-medium">
+				</h2>
+				<h1 className="italic text-3xl text-[#FFF7E591] font-medium">
 					Patch The Reality
-				</p>
+				</h1>
 			</div>
 
 			<div className="relative md:h-[105vh] sm:h-[85vh] h-[65vh] sm:top-4 -top-3 -left-5 aspect-video z-0">
@@ -102,7 +102,7 @@ const Hero = () => {
 			</div>
 
 			<div className={`absolute flex bg-pink-500/500 md:-right-5 right-10 sm:bottom-32 bottom-50 font-kanit h-40 w-[27vw] z-20`}>
-				<Link href="/register" className={`absolute text-[#62009B] lg:w-80 md:w-70 sm:w-65 w-55  p-5 lg:right-35 md:right-28 sm:right-5 right-3 bg-[#FFEE00] md:h-16 sm:h-14 h-10 rounded-full border-[#FFD620] border-4 md:text-3xl text-2xl font-extrabold flex items-center justify-center bottom-0 hover:bg-[#FFC300B8] hover:border-[#FFD620] transition-colors duration-300 cursor-pointer z-20`}>
+				<Link href="https://hackbyte4.devfolio.co" className={`absolute text-[#62009B] lg:w-80 md:w-70 sm:w-65 w-55  p-5 lg:right-35 md:right-28 sm:right-5 right-3 bg-[#FFEE00] md:h-16 sm:h-14 h-10 rounded-full border-[#FFD620] border-4 md:text-3xl text-2xl font-extrabold flex items-center justify-center bottom-0 hover:bg-[#FFC300B8] hover:border-[#FFD620] transition-colors duration-300 cursor-pointer z-20`}>
 					REGISTER NOW
 				</Link>
 				<div className="absolute h-full lg:w-30 top-4 sm:top-0 md:w-25 sm:w-20 w-15 lg:right-10 sm:-right-10 md:right-10 -right-8">
@@ -117,13 +117,13 @@ const Hero = () => {
 			</div>
 
 			<div className={`absolute text-3xl font-kanit bg-pink-400/300 bottom-20 sm:bottom-35 lg:scale-100 sm:-left-8 md:-left-3 sm:scale-70 lg:left-10 md:scale-80 scale-50 -left-17 text-black`}>
-				<div className="text-white text-stroke-brand-thick font-extrabold text-4xl">When:</div>
-				<div className="text-[#62009B] text-stroke-white-thick font-extrabold text-5xl">3-5 April,2026</div>
+				<div className="text-white text-stroke-brand-thick font-extrabold text-5xl pb-3">When:</div>
+				<time dateTime="2026-04-03" className="text-[#62009B] text-stroke-white-thick font-extrabold text-5xl">3-5 April, 2026</time>
 				<div className="flex gap-3">
 					<div className="text-white text-stroke-brand-thick font-extrabold text-5xl">@</div>
-					<div className="text-[#62009B] flex items-end text-stroke-white-medium font-extrabold text-3xl">
+					<address className="text-[#62009B] flex items-end text-stroke-white-medium font-extrabold text-3xl not-italic">
 						IIITDM Jabalpur
-					</div>
+					</address>
 				</div>
 			</div>
 
@@ -156,7 +156,7 @@ const Hero = () => {
 							priority
 						/>
 					</Link>
-					<Link href="https://discord.com/invite/6RDuTPnAME" className="relative w-8 h-8">
+					<Link href="https://discord.com/invite/NTueHjdPn8" className="relative w-8 h-8">
 						<Image
 							src="/discord.svg"
 							alt="Discord"

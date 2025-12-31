@@ -67,7 +67,7 @@ export function Footer() {
             </p>
             <ul className="flex flex-row gap-6 justify-between items-center">
               <li>
-                <Link href="https://www.linkedin.com/company/bitbyte-tpc/posts/?feedView=all">
+                <Link href="https://www.linkedin.com/company/bitbyte-tpc">
                   <Image
                     src="/linkdin.svg"
                     alt="linkedIn"
@@ -78,7 +78,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://www.instagram.com/hackbyte.tpc/?hl=en">
+                <Link href="https://www.instagram.com/hackbyte.tpc">
                   <Image
                     src="/insta.svg"
                     alt="instagram"
@@ -100,7 +100,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://discord.com/invite/6RDuTPnAME">
+                <Link href="https://discord.com/invite/NTueHjdPn8">
                   <Image
                     src="/discord.svg"
                     alt="discord"

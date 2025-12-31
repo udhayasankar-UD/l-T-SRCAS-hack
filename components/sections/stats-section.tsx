@@ -25,7 +25,7 @@ async function StatsSection() {
   ];
 
   return (
-    <section className="relative h-[50vh] md:h-[60vh] lg:h-[80vh] max-h-[90vh] w-full overflow-visible bg-black mt-0">
+    <section className="relative h-[50vh] md:h-[60vh] lg:h-[80vh] max-h-[90vh] w-full overflow-hidden bg-black mt-0">
       <div className="w-full h-32 absolute top-[10vw] z-10">
         <Image
           src={"/stats-upper-2.svg"}
@@ -49,32 +49,32 @@ async function StatsSection() {
       
 
       <div className="size-full flex justify-center items-center px-4 py-8 md:py-0">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-7xl">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-7xl lg:gap-30">
           <Image
             src={"/stats-registrations.svg"}
             alt="glass design"
-            className="w-full h-auto max-w-[150px] md:max-w-50 xl:max-w-[300px] mx-auto"
+            className="w-full h-auto max-w-[150px] md:max-w-50 xl:max-w-[300px] mx-auto lg:scale-140"
             width={300}
             height={300}
           />
           <Image
             src={"/stats-participants.svg"}
             alt="glass design"
-            className="w-full h-auto max-w-[150px] md:max-w-50 xl:max-w-[300px] mx-auto"
+            className="w-full h-auto max-w-[150px] md:max-w-50 xl:max-w-[300px] mx-auto lg:scale-140"
             width={300}
             height={300}
           />
           <Image
             src={"/stats-volunteers.svg"}
             alt="glass design"
-            className="w-full h-auto max-w-[150px] md:max-w-[200px] xl:max-w-[300px] mx-auto"
+            className="w-full h-auto max-w-[150px] md:max-w-[200px] xl:max-w-[300px] mx-auto lg:scale-140"
             width={300}
             height={300}
           />
           <Image
             src={"/stats-projects.svg"}
             alt="glass design"
-            className="w-full h-auto max-w-[150px] md:max-w-[200px] xl:max-w-[300px] mx-auto"
+            className="w-full h-auto max-w-[150px] md:max-w-[200px] xl:max-w-[300px] mx-auto lg:scale-140"
             width={300}
             height={300}
           />

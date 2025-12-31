@@ -34,32 +34,32 @@ const NAV_ITEMS = [
   },
   {
     id: "activity",
-    label: "Partners",
+    label: "Sponsers",
     activeIcon: "/Sponsor.svg",
     icon: Handshake,
-    href: "/partners",
+    href: "/sponsers",
   },
-  {
-    id: "updates",
-    label: "Prizes",
-    activeIcon: "/Prizes.svg",
-    icon: Trophy,
-    href: "/prizes",
-  },
-  {
-    id: "calendar",
-    label: "Schedule",
-    activeIcon: "/Calendar.svg",
-    icon: Calendar,
-    href: "/schedule",
-  },
-  {
-    id: "users",
-    label: "Humans",
-    activeIcon: "/People.svg",
-    icon: Users,
-    href: "/humans",
-  },
+  // {
+  //   id: "updates",
+  //   label: "Prizes",
+  //   activeIcon: "/Prizes.svg",
+  //   icon: Trophy,
+  //   href: "/prizes",
+  // },
+  // {
+  //   id: "calendar",
+  //   label: "Schedule",
+  //   activeIcon: "/Calendar.svg",
+  //   icon: Calendar,
+  //   href: "/schedule",
+  // },
+  // {
+  //   id: "users",
+  //   label: "Humans",
+  //   activeIcon: "/People.svg",
+  //   icon: Users,
+  //   href: "/humans",
+  // },
   {
     id: "info",
     label: "FAQs",
@@ -111,7 +111,7 @@ const DesktopNavBar: React.FC = () => {
           onMouseLeave={handleMouseLeave}
           className="
                         relative
-                        flex items-center gap-2 px-6 py-[5]
+                        flex items-center gap-2 px-4 py-[3]
                         rounded-full
                         bg-white/5 
                         backdrop-blur-[20px] 
@@ -185,11 +185,11 @@ const DesktopNavBar: React.FC = () => {
                     <Image
                       src={item.activeIcon}
                       alt={item.label}
-                      width={26}
-                      height={26}
+                      width={24}
+                      height={24}
                     />
                   ) : (
-                    <LucideIcon size={26} strokeWidth={2} />
+                    <LucideIcon size={22} strokeWidth={2} />
                   )}
                 </div>
 
