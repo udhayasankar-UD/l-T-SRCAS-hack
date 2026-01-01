@@ -4,6 +4,7 @@ import "./globals.css";
 import GlassNavBar from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ViewTransitions } from 'next-view-transitions'
+import SmoothScroll from "@/components/SmoothScroll";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hackbyte.in'), // Replace with your actual domain
+  metadataBase: new URL('https://hackbyte.in'),
   title: {
     default: "HackByte 3.0 | IIITDMJ Hackathon",
     template: "%s | HackByte 3.0"
@@ -67,9 +68,11 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} ${poppins.className} antialiased overflow-x-hidden bg-black`}
         >
-          <GlassNavBar />
-          {children}
-          <Footer />
+          <SmoothScroll>
+            <GlassNavBar />
+            {children}
+            <Footer />
+          </SmoothScroll>
         </body>
       </html>
     </ViewTransitions>

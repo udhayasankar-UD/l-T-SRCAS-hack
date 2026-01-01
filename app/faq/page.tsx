@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Mail, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import FadeInView from "@/components/FadeInView";
 
 export default function FaqPage() {
 	const faqs = [
@@ -75,108 +76,111 @@ export default function FaqPage() {
 				/>
 			</div>
 
-			{/* Top graphics */}
-			<div className="w-full h-50">
-				<Image
-					src="/heading.svg"
-					alt="Heading"
-					width={666}
-					height={208}
-					className="absolute hidden sm:block sm:top-50 top-25 w-[83%] z-10 sm:w-[70%] md:w-[65%] lg:w-[60%] xl:w-[52%]"
-					priority
-				/>
-				<Image
-					src="/small_heading.svg"
-					alt="Heading"
-					width={666}
-					height={208}
-					className="sm:hidden absolute sm:top-50 top-25 w-[83%] z-10 sm:w-[70%] md:w-[65%] lg:w-[60%] xl:w-[52%]"
-					priority
-				/>
-				<Image
-					src="/question marks.svg"
-					alt="Question marks"
-					width={266}
-					height={340}
-					className="absolute top-20 w-[22%] -right-2 z-10 sm:w-[25%] md:w-[23%] lg:w-[23%] xl:w-[18%] sm:right-[5%] md:right-[10%] lg:right-[10%] xl:right-[15%] m:top-30 md:top-30 lg:top-30"
-					priority
-				/>
-			</div>
+			<FadeInView duration={0.8}>
+				<div className="w-full h-50">
+					<Image
+						src="/heading.svg"
+						alt="Heading"
+						width={666}
+						height={208}
+						className="absolute hidden sm:block sm:top-50 top-25 w-[83%] z-10 sm:w-[70%] md:w-[65%] lg:w-[60%] xl:w-[52%]"
+						priority
+					/>
+					<Image
+						src="/small_heading.svg"
+						alt="Heading"
+						width={666}
+						height={208}
+						className="sm:hidden absolute sm:top-50 top-25 w-[83%] z-10 sm:w-[70%] md:w-[65%] lg:w-[60%] xl:w-[52%]"
+						priority
+					/>
+					<Image
+						src="/question marks.svg"
+						alt="Question marks"
+						width={266}
+						height={340}
+						className="absolute top-20 w-[22%] -right-2 z-10 sm:w-[25%] md:w-[23%] lg:w-[23%] xl:w-[18%] sm:right-[5%] md:right-[10%] lg:right-[10%] xl:right-[15%] m:top-30 md:top-30 lg:top-30"
+						priority
+					/>
+				</div>
+			</FadeInView>
 
 			{/* Content (make it part of normal flow so the page has height) */}
 			<div className="relative z-10 w-full pt-[44vw] sm:pt-[44vw] md:pt-[42vw] lg:pt-[42vw] xl:pt-[33vw] pb-24">
 				<div className="px-6 md:px-12 lg:pl-20">
 					<div className="grid grid-cols-1 lg:grid-cols-[540px_1fr] gap-16 lg:gap-0 xl:gap-60 items-start">
-						{/* Left info */}
-						<div className="flex flex-col sm:gap-4 gap-2">
-							<p className="text-white text-stroke-brand-thick font-extrabold text-4xl sm:text-6xl font-kanit pb-2">
-								FAQs
-							</p>
+						<FadeInView delay={0.2}>
+							<div className="flex flex-col sm:gap-4 gap-2">
+								<p className="text-white text-stroke-brand-thick font-extrabold text-4xl sm:text-6xl font-kanit pb-2">
+									FAQs
+								</p>
 
-							<p className="font-poppins text-white/90 sm:text-xl text-md font-medium">
-								Everything you need to know about participating in the Hackathon.
-							</p>
+								<p className="font-poppins text-white/90 sm:text-xl text-md font-medium">
+									Everything you need to know about participating in the Hackathon.
+								</p>
 
-							<p className="font-poppins text-white sm:text-2xl text-xl font-bold">OR</p>
+								<p className="font-poppins text-white sm:text-2xl text-xl font-bold">OR</p>
 
-							<p className="font-poppins text-white/90 sm:text-xl text-md font-medium max-w-[20rem]">
-								Think we missed something? Reach out at
-							</p>
+								<p className="font-poppins text-white/90 sm:text-xl text-md font-medium max-w-[20rem]">
+									Think we missed something? Reach out at
+								</p>
 
-							<Link
-								href="/"
-								className="font-poppins flex gap-3 items-center text-white sm:text-lg text-md font-medium w-fit"
-							>
-								<Mail />
-								<span>hackbyte@iiitdmj.ac.in</span>
-							</Link>
-						</div>
+								<Link
+									href="/"
+									className="font-poppins flex gap-3 items-center text-white sm:text-lg text-md font-medium w-fit"
+								>
+									<Mail />
+									<span>hackbyte@iiitdmj.ac.in</span>
+								</Link>
+							</div>
+						</FadeInView>
 
-						{/* Right accordion */}
-						<div className="w-full max-w-4xl">
-							<div className="flex flex-col">
-								{faqs.map((item, idx) => {
-									const open = openIndex === idx;
-									return (
-										<div
-											key={item.question}
-											className="border-b-2 border-white/65 py-9"
-										>
-											<button
-												type="button"
-												onClick={() => setOpenIndex(open ? null : idx)}
-												className="w-full flex items-center justify-between gap-4 text-left"
-											>
-												<span className="font-poppins text-white font-semibold text-lg md:text-2xl">
-													{item.question}
-												</span>
-
-												<ChevronDown
-													className={`shrink-0 text-white transition-transform duration-200 ${open ? "rotate-180" : "rotate-0"
-														}`}
-												/>
-											</button>
-
+						<FadeInView delay={0.1}>
+							<div className="w-full max-w-4xl">
+								<div className="flex flex-col">
+									{faqs.map((item, idx) => {
+										const open = openIndex === idx;
+										return (
 											<div
-												className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${open
+												key={item.question}
+												className="border-b-2 border-white/65 py-9"
+											>
+												<button
+													type="button"
+													onClick={() => setOpenIndex(open ? null : idx)}
+													className="w-full flex items-center justify-between gap-4 text-left"
+												>
+													<span className="font-poppins text-white font-semibold text-lg md:text-2xl">
+														{item.question}
+													</span>
+
+													<ChevronDown
+														className={`shrink-0 text-white transition-transform duration-200 ${open ? "rotate-180" : "rotate-0"
+															}`}
+													/>
+												</button>
+
+												<div
+													className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${open
 														? "grid-rows-[1fr] opacity-100 mt-3"
 														: "grid-rows-[0fr] opacity-0 mt-0"
-													}`}
-											>
-												<div className="overflow-hidden">
-													<p className="font-poppins text-white/80 text-base md:text-lg">
-														{item.answer}
-													</p>
+														}`}
+												>
+													<div className="overflow-hidden">
+														<p className="font-poppins text-white/80 text-base md:text-lg">
+															{item.answer}
+														</p>
+													</div>
 												</div>
 											</div>
-										</div>
-									);
-								})}
-							</div>
+										);
+									})}
+								</div>
 
-							{/* subtle bottom spacing like the screenshot */}
-							<div className="h-6" />
-						</div>
+								{/* subtle bottom spacing like the screenshot */}
+								<div className="h-6" />
+							</div>
+						</FadeInView>
 					</div>
 				</div>
 			</div>
