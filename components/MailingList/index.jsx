@@ -105,17 +105,15 @@ const MailingList = () => {
                             alt="bullet"
                             className="w-2 h-2 md:w-5 md:h-5"
                           />
-                        </div>
-                        <span
-                          className={`text-[#6b21a8] text-[4vw] md:text-xl leading-tight font-poppins ${
-                            i === 2 ? "font-[900]" : "font-[400]"
-                          }`}
-                        >
-                          {text}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                      </div>
+                      <span
+                        className={`text-[#6b21a8] text-[4vw] md:text-xl leading-tight font-poppins ${i === 2 ? "font-[900]" : "font-[400]"}`}
+                      >
+                        {text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
 
                   <div className="flex-shrink-0 relative w-[60px] h-[60px] mr-1 md:w-[140px] md:h-[100px]">
                     <Image

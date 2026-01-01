@@ -53,13 +53,13 @@ const NAV_ITEMS = [
   //   icon: Calendar,
   //   href: "/schedule",
   // },
-  // {
-  //   id: "users",
-  //   label: "Humans",
-  //   activeIcon: "/People.svg",
-  //   icon: Users,
-  //   href: "/humans",
-  // },
+  {
+    id: "users",
+    label: "Humans",
+    activeIcon: "/People.svg",
+    icon: Users,
+    href: "/humans",
+  },
   {
     id: "info",
     label: "FAQs",
