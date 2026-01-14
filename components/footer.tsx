@@ -113,6 +113,17 @@ export function Footer() {
                   />
                 </Link>
               </li>
+              <li>
+                <Link href="https://whatsapp.com/channel/0029Vb712h5J3juqIsG6Ah3y">
+                  <Image
+                    src="/whatsapp.png"
+                    alt="whatsapp"
+                    width={38}
+                    height={38}
+                    className="max-sm:w-[25px] max-sm:h-[25px]"
+                  />
+                </Link>
+              </li>
             </ul>
           </div>
           {/*copyright*/}

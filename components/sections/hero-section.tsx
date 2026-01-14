@@ -11,10 +11,10 @@ const Hero = () => {
 			<div className="absolute sm:w-33 w-20 top-0 sm:right-18 right-6 z-20 h-80">
 				<FadeInView delay={0.3} yOffset={-30}>
 					<a
-					href="https://mlh.io/seasons/2026/events"
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label="MLH 2026 Events"
+						href="https://mlh.io/seasons/2026/events"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="MLH 2026 Events"
 					>
 						<Image
 							src="/mlh-badge.svg"
@@ -74,6 +74,15 @@ const Hero = () => {
 							<Image
 								src="/discord.svg"
 								alt="Discord"
+								fill
+								className="object-contain"
+								priority
+							/>
+						</Link>
+						<Link href="https://whatsapp.com/channel/0029Vb712h5J3juqIsG6Ah3y" className="relative w-8 h-8">
+							<Image
+								src="/whatsapp.png"
+								alt="WhatsApp"
 								fill
 								className="object-contain"
 								priority
@@ -179,6 +188,15 @@ const Hero = () => {
 						<Image
 							src="/discord.svg"
 							alt="Discord"
+							fill
+							className="object-contain"
+							priority
+						/>
+					</Link>
+					<Link href="https://whatsapp.com/channel/0029Vb712h5J3juqIsG6Ah3y" className="relative w-7 h-7">
+						<Image
+							src="/whatsapp.png"
+							alt="WhatsApp"
 							fill
 							className="object-contain"
 							priority
