@@ -47,57 +47,57 @@ const MailingList = () => {
   };
 
   return (
-    <div className="w-full min-h-screen relative bg-[linear-gradient(206deg,_#4E0088_13.13%,_#180029_86.33%)] overflow-hidden flex flex-col items-center justify-center py-20">
+    <div className="w-full min-h-screen relative bg-gradient-to-br from-[#F0F7FF] to-white overflow-hidden flex flex-col items-center justify-center py-20">
       {/* Lightning Left - no animation (decorative background) */}
       <FadeInView className={"absolute top-[5px] md:top-[-180px] left-[-5%] md:left-[-40px] w-[50vw] md:w-[620px] aspect-square z-0 pointer-events-none"}>
-      <div className="">
-        
+        <div className="">
+
           <Image
-          src="/MailingList/lightning_left.svg"
-          alt="lightning-effect"
-          fill
-          className="object-contain"
-        />
-      </div>
+            src="/MailingList/lightning_left.svg"
+            alt="lightning-effect"
+            fill
+            className="object-contain"
+          />
+        </div>
       </FadeInView>
 
       {/* Lightning Right - no animation (decorative background) */}
       <FadeInView className="absolute top-[-25px] md:top-[-190px] right-[-5%] md:right-[-10px] w-[50vw] md:w-[620px] aspect-square z-0 pointer-events-none">
         <div className="">
           <Image
-          src="/MailingList/lightning_right.svg"
-          alt="lightning-effect"
-          fill
-          className="object-contain"
-        />
-      </div>
+            src="/MailingList/lightning_right.svg"
+            alt="lightning-effect"
+            fill
+            className="object-contain"
+          />
+        </div>
       </FadeInView>
 
-      
+
       <div className="absolute top-0 md:top-[-90px] left-[5%] md:left-[100px] z-10 pt-10 md:pt-16 pointer-events-none">
 
         <FadeInView className="relative w-[100px] h-[100px] md:w-[210px] md:h-[210px] rotate-[-147]">
           <Image
-              src="/MailingList/siren.svg"
-              alt="soundhorn-svg"
-              fill
-              className="object-contain origin-center"
-            />
+            src="/MailingList/siren.svg"
+            alt="soundhorn-svg"
+            fill
+            className="object-contain origin-center"
+          />
         </FadeInView>
       </div>
-      
+
       {/* Siren Icon */}
 
       {/* Join Newsletter Header */}
-        <FadeInView delay={0.5} className="absolute top-[50px] md:top-[50px] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[93px] z-20 w-[90%] md:w-[800px] h-[150px] md:h-[240px] pointer-events-none">
-          <Image
-            src="/MailingList/join_newsletter.svg"
-            alt="Join Our Newsletter"
-            fill
-            className="object-contain rotate-[-4deg] drop-shadow-[0_2.878px_0_rgba(0,0,0,0.25)]"
-          />
-        </FadeInView>
-      
+      <FadeInView delay={0.5} className="absolute top-[50px] md:top-[50px] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[93px] z-20 w-[90%] md:w-[800px] h-[150px] md:h-[240px] pointer-events-none">
+        <Image
+          src="/MailingList/join_newsletter.svg"
+          alt="Join Our Newsletter"
+          fill
+          className="object-contain rotate-[-4deg] drop-shadow-[0_2.878px_0_rgba(0,0,0,0.25)]"
+        />
+      </FadeInView>
+
 
       <div
         className={`mt-[140px] md:mt-[250px] w-full flex flex-col items-center px-4 md:px-6 relative z-30 font-kanit`}
@@ -105,7 +105,7 @@ const MailingList = () => {
         <div className="relative w-full max-w-[850px] px-2">
           {/* Main Card */}
           <FadeInView delay={0.1}>
-            <div className="relative w-full z-20 bg-[linear-gradient(97deg,_#570089_-1.22%,_#A200FF_49.96%,_#210035_142.76%)] border-[4px] md:border-[11px] border-white rounded-[20px] p-2 md:p-3 shadow-2xl">
+            <div className="relative w-full z-20 bg-gradient-to-r from-[#005CAA] via-[#0076D6] to-[#003366] border-[4px] md:border-[11px] border-white rounded-[20px] p-2 md:p-3 shadow-2xl">
               {/* Bandaid decoration */}
               <div className="absolute bottom-0 right-0 translate-x-[35%] translate-y-[43%] md:top-0 md:left-0 md:-translate-x-[40%] md:-translate-y-[35%] w-[200px] md:w-[clamp(370px,8vw,100px)] aspect-[2.2/1] z-30 pointer-events-none transform rotate-[-33.74]">
                 <Image
@@ -154,9 +154,8 @@ const MailingList = () => {
                           />
                         </div>
                         <span
-                          className={`text-[#6b21a8] text-[4vw] md:text-xl leading-tight font-poppins ${
-                            i === 2 ? "font-[900]" : "font-[400]"
-                          }`}
+                          className={`text-[#005CAA] text-[4vw] md:text-xl leading-tight font-poppins ${i === 2 ? "font-[900]" : "font-[400]"
+                            }`}
                         >
                           {text}
                         </span>
@@ -180,7 +179,7 @@ const MailingList = () => {
 
         {/* Email Input Form */}
         <div className="w-full max-w-[850px] mt-17 md:mt-8 relative">
-          <div className="mx-1 relative rounded-[24px] md:rounded-full p-[5px] bg-[#7A00D4] shadow-[0_10px_0_rgba(0,0,0,0.35)]">
+          <div className="mx-1 relative rounded-[24px] md:rounded-full p-[5px] bg-[#005CAA] shadow-[0_10px_0_rgba(0,0,0,0.35)]">
             <div
               className="relative
                 flex flex-col md:flex-row
@@ -231,8 +230,8 @@ const MailingList = () => {
                     px-6 md:px-10
                     rounded-[14px]
                     md:rounded-full
-                    bg-[linear-gradient(104deg,_#FFEC1A_24.89%,_#FFE60B_56.78%,_#FFE41A_108.63%)]
-                    text-[#2B0040]
+                    bg-[#FBA919]
+                    text-white
                     font-extrabold
                     text-sm md:text-lg
                     transition-transform

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   description: "HackByte is IIITDMJ's student-run hackathon. Join us for 3 days of coding, innovation, and fun. April 3-5, 2026.",
   icons: {
     icon: '/favicon.ico',
-    },
+  },
   keywords: ["Hackathon", "IIITDMJ", "Coding", "HackByte", "Jabalpur", "Tech Event"],
   openGraph: {
     title: "HackByte 4.0 | IIITDMJ Hackathon",
@@ -69,7 +69,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} ${poppins.className} antialiased overflow-x-hidden bg-black`}
+          className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} ${poppins.className} antialiased overflow-x-hidden bg-white`}
         >
           <SmoothScroll>
             <GlassNavBar />

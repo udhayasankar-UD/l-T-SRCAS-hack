@@ -48,7 +48,7 @@ export default function HumanCard({
         )}
         <p
           className="
-            text-white font-Kanit text-xl sm:text-2xl font-semibold leading-[140%]
+            text-[#003366] font-Kanit text-xl sm:text-2xl font-semibold leading-[140%]
           "
         >
           {name}

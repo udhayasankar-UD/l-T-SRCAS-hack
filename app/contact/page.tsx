@@ -6,10 +6,7 @@ import FadeInView from "@/components/FadeInView";
 
 export default function ContactPage() {
     return (
-        <div className="relative flex flex-col m-0 p-0 w-screen min-h-screen overflow-hidden" style={{
-            backgroundImage: 'url(/FAQs.svg)',
-            backgroundSize: 'cover',
-        }}>
+        <div className="relative flex flex-col m-0 p-0 w-screen min-h-screen overflow-hidden bg-gradient-to-br from-white to-[#F0F7FF]">
             {/*Header section*/}
             <div className="relative flex flex-row justify-between mt-50 max-sm:mt-10 max-sm:pt-0">
                 <div>
@@ -36,7 +33,7 @@ export default function ContactPage() {
                 </FadeInView>
                 {/*box*/}
                 <FadeInView delay={0.3}>
-                    <div className="bg-black w-[90vw] h-200 border-white border-10 rounded-4xl mx-auto mt-10 mb-10 max-sm:w-100 max-sm:h-100 max-sm:border-5 max-sm:mt-2 max-sm:rounded-3xl">
+                    <div className="bg-white w-[90vw] h-200 border-[#005CAA] border-4 rounded-4xl mx-auto mt-10 mb-10 max-sm:w-100 max-sm:h-100 max-sm:border-3 max-sm:mt-2 max-sm:rounded-3xl shadow-lg">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.4774721298!2d80.02231931544636!3d23.176386884867444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981ae1a0fb6a97d%3A0x44020f94f795d69f!2sIIITDM%20Jabalpur!5e0!3m2!1sen!2sin!4v1629789876543!5m2!1sen!2sin"
                             width="100%"
@@ -70,8 +67,8 @@ export default function ContactPage() {
                     <div className="max-sm:flex max-sm:flex-col max-sm:items-center">
                         <Image src="/mailUs.svg" alt="email details" width={240} height={55} className="max-sm:w-40" />
                         <div className="flex flex-row gap-2 mt-4 items-center">
-                            <Mail className="inline-block text-white" size={26} />
-                            <span className="text-white text-2xl align-middle font-kanit">hackbyte@iiitdmj.ac.in</span>
+                            <Mail className="inline-block text-[#005CAA]" size={26} />
+                            <span className="text-[#003366] text-2xl align-middle font-kanit">hackbyte@iiitdmj.ac.in</span>
                         </div>
                     </div>
                 </FadeInView>
@@ -80,7 +77,7 @@ export default function ContactPage() {
                     <div className="relative mr-100 max-sm:mr-0 max-sm:flex max-sm:flex-col max-sm:items-center max-sm:mt-20">
                         <Image src="/Address.svg" alt="address details" width={240} height={55} className="max-sm:w-40" />
                         <div className="mt-4">
-                            <p className="text-white text-xl align-middle font-kanit max-sm:font-center">IIITDM Jabalpur, Near Dumna Airport,<br />Jabalpur, Madhya Pradesh 482005</p>
+                            <p className="text-[#003366] text-xl align-middle font-kanit max-sm:font-center">IIITDM Jabalpur, Near Dumna Airport,<br />Jabalpur, Madhya Pradesh 482005</p>
                         </div>
                     </div>
                 </FadeInView>

@@ -65,15 +65,7 @@ export default function FaqPage() {
 	return (
 		<div className="relative w-full min-h-svh overflow-x-hidden">
 			{/* Background (fills the screen on all sizes) */}
-			<div className="absolute inset-0 -z-10">
-				<Image
-					src="/FAQs.svg"
-					alt="FAQs background"
-					fill
-					priority
-					sizes="100vw"
-					className="object-cover object-top"
-				/>
+			<div className="absolute inset-0 -z-10 bg-gradient-to-br from-white to-[#F0F7FF]">
 			</div>
 
 			<FadeInView duration={0.8}>
@@ -111,23 +103,23 @@ export default function FaqPage() {
 					<div className="grid grid-cols-1 lg:grid-cols-[540px_1fr] gap-16 lg:gap-0 xl:gap-60 items-start">
 						<FadeInView delay={0.2}>
 							<div className="flex flex-col sm:gap-4 gap-2">
-								<p className="text-white text-stroke-brand-thick font-extrabold text-4xl sm:text-6xl font-kanit pb-2">
+								<p className="text-[#005CAA] font-extrabold text-4xl sm:text-6xl font-kanit pb-2">
 									FAQs
 								</p>
 
-								<p className="font-poppins text-white/90 sm:text-xl text-md font-medium">
+								<p className="font-poppins text-[#1A1A1A] sm:text-xl text-md font-medium">
 									Everything you need to know about participating in the Hackathon.
 								</p>
 
-								<p className="font-poppins text-white sm:text-2xl text-xl font-bold">OR</p>
+								<p className="font-poppins text-[#003366] sm:text-2xl text-xl font-bold">OR</p>
 
-								<p className="font-poppins text-white/90 sm:text-xl text-md font-medium max-w-[20rem]">
+								<p className="font-poppins text-[#1A1A1A] sm:text-xl text-md font-medium max-w-[20rem]">
 									Think we missed something? Reach out at
 								</p>
 
 								<Link
 									href="/"
-									className="font-poppins flex gap-3 items-center text-white sm:text-lg text-md font-medium w-fit"
+									className="font-poppins flex gap-3 items-center text-[#005CAA] sm:text-lg text-md font-medium w-fit"
 								>
 									<Mail />
 									<span>hackbyte@iiitdmj.ac.in</span>
@@ -143,19 +135,19 @@ export default function FaqPage() {
 										return (
 											<div
 												key={item.question}
-												className="border-b-2 border-white/65 py-9"
+												className="border-b-2 border-[#005CAA]/30 py-9"
 											>
 												<button
 													type="button"
 													onClick={() => setOpenIndex(open ? null : idx)}
 													className="w-full flex items-center justify-between gap-4 text-left"
 												>
-													<span className="font-poppins text-white font-semibold text-lg md:text-2xl">
+													<span className="font-poppins text-[#003366] font-semibold text-lg md:text-2xl">
 														{item.question}
 													</span>
 
 													<ChevronDown
-														className={`shrink-0 text-white transition-transform duration-200 ${open ? "rotate-180" : "rotate-0"
+														className={`shrink-0 text-[#005CAA] transition-transform duration-200 ${open ? "rotate-180" : "rotate-0"
 															}`}
 													/>
 												</button>
@@ -167,7 +159,7 @@ export default function FaqPage() {
 														}`}
 												>
 													<div className="overflow-hidden">
-														<p className="font-poppins text-white/80 text-base md:text-lg">
+														<p className="font-poppins text-[#1A1A1A]/80 text-base md:text-lg">
 															{item.answer}
 														</p>
 													</div>

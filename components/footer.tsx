@@ -6,17 +6,16 @@ export function Footer() {
     <footer
       className="relative w-full flex flex-col"
       style={{
-        backgroundImage: "url(/blackbgFooter.png)",
-        backgroundSize: "cover",
+        background: "linear-gradient(to bottom, #F8FAFC, #FFFFFF)",
       }}
     >
       {/*socials tape*/}
-      <div className=" relative flex flex-row w-full justify-between items-center h-[216px] bg-[#62009b] border-white border-t-12 border-b-12 px-8 max-sm:h-[230px] max-sm:border-b-3 max-sm:border-t-3 max-sm:items-start max-sm:px-4 max-sm:inline-block">
+      <div className=" relative flex flex-row w-full justify-between items-center h-[216px] bg-[#005CAA] border-[#003366] border-t-4 border-b-4 px-8 max-sm:h-[230px] max-sm:border-b-2 max-sm:border-t-2 max-sm:items-start max-sm:px-4 max-sm:inline-block">
 
 
         <Image
-          src="/HbSmallLogo.svg"
-          alt="Hackbyte logo"
+          src="/HbSmallogo.svg"
+          alt="L&T hack logo"
           width={500}
           height={300}
           className="z-20 relative left-40 max-sm:w-[200px] max-sm:h-[100px] max-sm:-left-15 max-sm:-top-10"
@@ -91,7 +90,7 @@ export function Footer() {
                   />
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="https://x.com/HackbyteTPC">
                   <Image
                     src="/x.svg"
@@ -112,7 +111,7 @@ export function Footer() {
                     className="max-sm:w-[25px] max-sm:h-[25px]"
                   />
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="https://whatsapp.com/channel/0029Vb712h5J3juqIsG6Ah3y">
                   <Image
@@ -128,14 +127,14 @@ export function Footer() {
           </div>
           {/*copyright*/}
           <div>
-            <p className="text-[#D9D9D9] font-bold opacity-51 text-lg font-gotham max-sm:top-45 max-sm:absolute max-sm:bottom-0 max-sm:text-sm max-sm:block max-sm:w-full max-sm:left-0 text-center">
-              @2025 Hackbyte, All rights reserved
+            <p className="text-white/90 font-bold text-lg font-gotham max-sm:top-45 max-sm:absolute max-sm:bottom-0 max-sm:text-sm max-sm:block max-sm:w-full max-sm:left-0 text-center">
+              @2025 SRCAS, All rights reserved
             </p>
           </div>
         </div>
       </div>
       {/*Broken glass*/}
-      <div>
+      {/* <div>
         <Image
           src="BrokenGlassFooter.svg"
           alt="broken glass"
@@ -145,7 +144,7 @@ export function Footer() {
         />
       </div>
       {/*patch the reality*/}
-      <div>
+      {/* <div>
         <Image
           src="/PatchTheReality-footer.svg"
           alt="patch the reality"
@@ -153,7 +152,7 @@ export function Footer() {
           height={100}
           className="mx-auto mt-25 mb-10 max-sm:mt-10 max-sm:w-[360px]"
         />
-      </div>
+      </div> */}
     </footer>
   )
 }

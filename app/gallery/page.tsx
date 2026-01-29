@@ -8,7 +8,7 @@ import bg from "../../components/sections/WhyParticipate/assets/bg.png";
 
 export default function Gallery() {
   return (
-    <section className="w-full min-h-screen py-0 lg:py-12 relative bg-linear-to-bl from-[#4E0088] to-[#180029] overflow-hidden">
+    <section className="w-full min-h-screen py-0 lg:py-12 relative bg-gradient-to-br from-white to-[#F0F7FF] overflow-hidden">
       <RedBand />
 
       <div className="w-full h-full top-36 z-0 px-4 pointer-events-none absolute">
@@ -61,7 +61,7 @@ export default function Gallery() {
       </div>
 
       <FadeInView delay={0.1}>
-        <div className="h-[350px] lg:h-[450px] w-full bg-gradient-to-r from-[#8A00DA] to-[#BA45E8] border-y-4 border-white z-20 -translate-y-6 relative flex items-center justify-center">
+        <div className="h-[350px] lg:h-[450px] w-full bg-gradient-to-r from-[#005CAA] to-[#0076D6] border-y-4 border-[#003366] z-20 -translate-y-6 relative flex items-center justify-center">
           <div className="absolute lg:top-[-140px] top-[-120px] left-1/2 -translate-x-1/2 w-full h-48">
             <Image
               src="/Gallery/our committee.svg"
@@ -72,13 +72,13 @@ export default function Gallery() {
             />
           </div>
           <div className="absolute size-full -z-10">
-            <ScrollingBackground 
-              imageUrl={bg.src} 
+            <ScrollingBackground
+              imageUrl={bg.src}
               speed={40}
-              direction="diagonal" 
-          />
+              direction="diagonal"
+            />
           </div>
-          <div className="h-[200px] lg:h-[350px] w-full max-w-[90%] lg:max-w-2xl border-4 border-white rounded-3xl bg-black relative overflow-hidden">
+          <div className="h-[200px] lg:h-[350px] w-full max-w-[90%] lg:max-w-2xl border-4 border-white rounded-3xl bg-[#005CAA] relative overflow-hidden">
             <Image
               src="/Gallery/committee.png"
               alt="Our Committee Photo"

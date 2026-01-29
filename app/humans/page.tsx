@@ -2,7 +2,7 @@
 import { useState, useMemo } from "react"
 import HumanCard from "@/components/HumansCard/Card"
 import Image from "next/image"
-import {organizerss} from "@/data/orgData"
+import { organizerss } from "@/data/orgData"
 import { mentorss } from "@/data/mentorData"
 import { famm } from "@/data/famData"
 import FadeInView from "@/components/FadeInView"
@@ -131,7 +131,7 @@ export default function HumansPage() {
         </div>
       </div>
 
-      <div className="min-h-screen w-screen bg-gradient-to-b from-black relative to-[#34085B] flex flex-col items-center pt-16 pb-30">
+      <div className="min-h-screen w-screen bg-gradient-to-b from-white relative to-[#F0F7FF] flex flex-col items-center pt-16 pb-30">
         <div className="w-full h-32 absolute z-10 bg-amber-300/300 -top-[14.9vw]">
           <FadeInView delay={0.05} yOffset={10}>
             <Image
@@ -148,13 +148,13 @@ export default function HumansPage() {
         {/* Toggle Button */}
         <FadeInView delay={0.15} yOffset={20} className="w-full">
           <div className="w-full flex items-start justify-start sm:pt-50 pt-15 z-100 px-8 md:px-20">
-            <div className="flex items-center bg-[#3D1A5C] rounded-full border border-purple-700/50 h-8 md:h-10">
+            <div className="flex items-center bg-[#F0F7FF] rounded-full border border-[#005CAA]/30 h-8 md:h-10 shadow-md">
               <button
                 onClick={() => setActiveTab("organizers")}
                 aria-pressed={activeTab === "organizers"}
                 className={`px-6 md:px-8 h-full rounded-full font-semibold text-sm md:text-lg transition-all duration-300 ${activeTab === "organizers"
-                    ? "bg-[#9E00F9] text-white shadow-lg"
-                    : "bg-transparent text-purple-300 hover:text-white"
+                  ? "bg-[#005CAA] text-white shadow-lg"
+                  : "bg-transparent text-[#003366] hover:text-[#005CAA]"
                   }`}
               >
                 Organizers
@@ -164,8 +164,8 @@ export default function HumansPage() {
                 onClick={() => setActiveTab("mentors")}
                 aria-pressed={activeTab === "mentors"}
                 className={`px-6 md:px-8 h-full rounded-full font-semibold text-sm md:text-lg transition-all duration-300 ${activeTab === "mentors"
-                    ? "bg-[#9E00F9] text-white shadow-lg"
-                    : "bg-transparent text-purple-300 hover:text-white"
+                  ? "bg-[#005CAA] text-white shadow-lg"
+                  : "bg-transparent text-[#003366] hover:text-[#005CAA]"
                   }`}
               >
                 Mentors
@@ -175,8 +175,8 @@ export default function HumansPage() {
                 onClick={() => setActiveTab("family")}
                 aria-pressed={activeTab === "family"}
                 className={`px-6 md:px-8 h-full rounded-full font-semibold text-sm md:text-lg transition-all duration-300 ${activeTab === "family"
-                    ? "bg-[#9E00F9] text-white shadow-lg"
-                    : "bg-transparent text-purple-300 hover:text-white"
+                  ? "bg-[#005CAA] text-white shadow-lg"
+                  : "bg-transparent text-[#003366] hover:text-[#005CAA]"
                   }`}
               >
                 Family

@@ -113,15 +113,15 @@ const DesktopNavBar: React.FC = () => {
                         relative
                         flex items-center gap-2 px-4 py-[3]
                         rounded-full
-                        bg-white/5 
+                        bg-white 
                         backdrop-blur-[20px] 
                         backdrop-saturate-150
-                        border border-white/10
-                        shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
+                        border border-[#E2E8F0]
+                        shadow-md
                         overflow-hidden
                         transition-all duration-300 ease-out
-                        hover:border-white/20 
-                        chromatic-shadow
+                        hover:border-[#005CAA]/30 
+                        hover:shadow-lg
                     "
         >
           <div
@@ -130,7 +130,7 @@ const DesktopNavBar: React.FC = () => {
               background: `
                                 radial-gradient(
                                     150px circle at ${mousePos.x}px ${mousePos.y}px, 
-                                    rgba(255,255,255,0.3), 
+                                    rgba(0,92,170,0.15), 
                                     transparent 60%
                                 )
                             `,
@@ -141,8 +141,8 @@ const DesktopNavBar: React.FC = () => {
             }}
           />
 
-          <div className="absolute inset-x-4 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-50" />
-          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/5 to-transparent opacity-30 pointer-events-none rounded-t-full" />
+          <div className="absolute inset-x-4 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#005CAA]/20 to-transparent opacity-50" />
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#005CAA]/5 to-transparent opacity-30 pointer-events-none rounded-t-full" />
 
           {NAV_ITEMS.map((item) => {
             const isActive = pathname === item.href;
@@ -169,16 +169,14 @@ const DesktopNavBar: React.FC = () => {
                   className={`
                                         relative z-10 
                                         transition-all duration-500 ease-out
-                                        ${
-                                          isActive
-                                            ? "text-white"
-                                            : "text-white/60 hover:text-white"
-                                        }
-                                        ${
-                                          isActive && mounted
-                                            ? "scale-150 -rotate-12"
-                                            : "scale-100 rotate-0"
-                                        }
+                                        ${isActive
+                      ? "text-[#005CAA]"
+                      : "text-[#003366]/60 hover:text-[#005CAA]"
+                    }
+                                        ${isActive && mounted
+                      ? "scale-150 -rotate-12"
+                      : "scale-100 rotate-0"
+                    }
                                     `}
                 >
                   {isActive ? (
@@ -197,16 +195,15 @@ const DesktopNavBar: React.FC = () => {
                   className={`
 										absolute -top-10 
 										px-2 py-1 
-										bg-black/50 backdrop-blur-md 
-										border border-white/10 
+										bg-[#005CAA] backdrop-blur-md 
+										border border-[#003366]/30 
 										rounded-md 
-										text-[10px] font-medium tracking-wide uppercase text-white/90
+										text-[10px] font-medium tracking-wide uppercase text-white
 										transition-all duration-300
-										${
-											isHovered
-												? "opacity-100 translate-y-0"
-												: "opacity-0 translate-y-2 pointer-events-none"
-										}
+										${isHovered
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-2 pointer-events-none"
+                    }
 								`}
                 >
                   {item.label}
@@ -275,10 +272,10 @@ const MobileNavBar: React.FC = () => {
 					relative
 					flex flex-col
 					rounded-3xl
-					bg-purple-500/500
+					bg-white
 					backdrop-blur-[20px]
-					border border-white/20
-					shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
+					border border-[#E2E8F0]
+					shadow-lg
 					transition-all duration-300 ease-out
 					overflow-hidden
 					${isOpen ? "p-3 gap-2" : "p-0"}
@@ -297,7 +294,7 @@ const MobileNavBar: React.FC = () => {
             height="calc(100% + 0.3px)"
             rx="24"
             fill="none"
-            stroke="rgba(255, 255, 255, 0.4)"
+            stroke="rgba(0, 92, 170, 0.3)"
             strokeWidth="0.6"
             strokeDasharray="90% 80%"
             strokeDashoffset="20%"
@@ -311,11 +308,10 @@ const MobileNavBar: React.FC = () => {
                         flex flex-col-reverse gap-1
                         transition-all duration-300 ease-out
                         overflow-hidden
-                        ${
-                          isOpen
-                            ? "max-h-[500px] opacity-100"
-                            : "max-h-0 opacity-0"
-                        }
+                        ${isOpen
+              ? "max-h-[500px] opacity-100"
+              : "max-h-0 opacity-0"
+            }
                     `}
         >
           {NAV_ITEMS.map((item) => {
@@ -333,7 +329,7 @@ const MobileNavBar: React.FC = () => {
                                     rounded-xl
                                     transition-all duration-300 ease-out
                                     focus:outline-none
-                                    hover:bg-white/10
+                                    hover:bg-[#005CAA]/10
                                 `}
               >
                 <div
@@ -342,11 +338,10 @@ const MobileNavBar: React.FC = () => {
                                         flex items-center justify-center
                                         w-6 h-6
                                         transition-all duration-300
-                                        ${
-                                          isActive
-                                            ? "text-white"
-                                            : "text-white/60"
-                                        }
+                                        ${isActive
+                      ? "text-[#005CAA]"
+                      : "text-[#003366]/60"
+                    }
                                     `}
                 >
                   {isActive ? (
@@ -364,16 +359,14 @@ const MobileNavBar: React.FC = () => {
                   className={`
                                         text-base font-medium whitespace-nowrap
                                         transition-all duration-300
-                                        ${
-                                          isActive
-                                            ? "text-white font-semibold"
-                                            : "text-white/80"
-                                        }
-                                        ${
-                                          showLabels
-                                            ? "opacity-100 translate-x-0"
-                                            : "opacity-0 translate-x-4 pointer-events-none"
-                                        }
+                                        ${isActive
+                      ? "text-[#005CAA] font-semibold"
+                      : "text-[#003366]/80"
+                    }
+                                        ${showLabels
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-4 pointer-events-none"
+                    }
                                     `}
                 >
                   {item.label}
@@ -390,7 +383,7 @@ const MobileNavBar: React.FC = () => {
                         flex items-center justify-center
                         flex-shrink-0
                         rounded-2xl
-                        bg-purple-500/500
+                        bg-[#005CAA]
                         transition-all duration-300 ease-out
                         active:scale-95
                         ${isOpen ? "w-10 h-10 self-end" : "w-14 h-14"}

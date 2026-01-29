@@ -8,7 +8,7 @@ const Hero = () => {
 	return (
 		<div className="h-screen w-screen bg-linear-to-tr flex items-center justify-center text-white font-sans overflow-hidden">
 			{/* MLH Badge */}
-			<div className="absolute sm:w-33 w-20 top-0 sm:right-18 right-6 z-20 h-80">
+			{/* <div className="absolute sm:w-33 w-20 top-0 sm:right-18 right-6 z-20 h-80">
 				<FadeInView delay={0.3} yOffset={-30}>
 					<a
 						href="https://mlh.io/seasons/2026/events"
@@ -26,7 +26,7 @@ const Hero = () => {
 						/>
 					</a>
 				</FadeInView>
-			</div>
+			</div> */}
 
 			{/* Corner cracks - no animation (decorative) */}
 			<div className="absolute aspect-video right-0 z-0 top-0 h-100 bg-pink-400/400">
@@ -98,17 +98,36 @@ const Hero = () => {
 				</FadeInView>
 			</div>
 
-			{/* Main Logo */}
-			<div className="relative md:h-[105vh] sm:h-[85vh] h-[65vh] sm:top-4 -top-3 -left-5 aspect-video z-0">
-				{/* <FadeInView delay={0.1} duration={0.8} yOffset={40}> */}
-				<Image
-					src="/Main Page Broken Effect logo.svg"
-					alt="Broken effect background"
-					fill
-					className="object-contain"
-					priority
-				/>
-				{/* </FadeInView> */}
+			{/* Main Logo - HACK L&T */}
+			<div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+				<FadeInView delay={0.2} yOffset={30}>
+					<div className="text-center select-none">
+						{/* HACK Text */}
+						<h1
+							className="font-kanit font-black text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
+							style={{
+								fontSize: 'clamp(5rem, 20vw, 16rem)',
+								lineHeight: '0.85',
+								letterSpacing: '0.05em',
+								textShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2)'
+							}}
+						>
+							HACK
+						</h1>
+						{/* L&T Text */}
+						<h2
+							className="font-kanit font-black text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
+							style={{
+								fontSize: 'clamp(3rem, 12vw, 10rem)',
+								lineHeight: '1',
+								letterSpacing: '0.15em',
+								textShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2)'
+							}}
+						>
+							L&T
+						</h2>
+					</div>
+				</FadeInView>
 			</div>
 
 			{/* Background - no animation */}
@@ -124,7 +143,7 @@ const Hero = () => {
 
 			{/* Register Button */}
 			<div className={`absolute flex bg-pink-500/500 md:-right-5 right-10 sm:bottom-32 bottom-50 font-kanit h-40 w-[27vw] z-20`}>
-				<Link href="https://hackbyte4.devfolio.co" className={`absolute text-[#62009B] lg:w-80 md:w-70 sm:w-65 w-55 p-5 lg:right-35 md:right-28 sm:right-5 right-3 bg-[#FFEE00] md:h-16 sm:h-14 h-10 rounded-full border-[#FFD620] border-4 md:text-3xl text-2xl font-extrabold flex items-center justify-center bottom-0 hover:bg-[#FFC300B8] hover:border-[#FFD620] transition-colors duration-300 cursor-pointer z-20`}>
+				<Link href="https://hackbyte4.devfolio.co" className={`absolute text-white lg:w-80 md:w-70 sm:w-65 w-55 p-5 lg:right-35 md:right-28 sm:right-5 right-3 bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 md:h-16 sm:h-14 h-10 rounded-full border-cyan-300 border-4 md:text-3xl text-2xl font-extrabold flex items-center justify-center bottom-0 hover:from-cyan-400 hover:via-cyan-300 hover:to-teal-300 hover:border-cyan-200 hover:shadow-[0_0_30px_rgba(0,255,255,0.6)] transition-all duration-300 cursor-pointer z-20 shadow-[0_0_20px_rgba(0,255,255,0.4)]`}>
 					REGISTER NOW
 				</Link>
 
@@ -142,12 +161,12 @@ const Hero = () => {
 			{/* Date & Location */}
 			<div className={`absolute text-3xl font-kanit bg-pink-400/300 bottom-20 sm:bottom-35 lg:scale-100 sm:-left-8 md:-left-3 sm:scale-70 lg:left-10 md:scale-80 scale-50 -left-17 text-black`}>
 				<FadeInView delay={0.3} yOffset={40}>
-					<div className="text-white text-stroke-brand-thick font-extrabold text-5xl pb-3">When:</div>
-					<time dateTime="2026-04-03" className="text-[#62009B] text-stroke-white-thick font-extrabold text-5xl">3-5 April, 2026</time>
+					<div className="text-white  font-extrabold text-5xl pb-3">When:</div>
+					<time dateTime="2026-04-03" className="text-white text-stroke-brand-thick font-extrabold text-5xl">3-5 March, 2026</time>
 					<div className="flex gap-3">
-						<div className="text-white text-stroke-brand-thick font-extrabold text-5xl">@</div>
-						<address className="text-[#62009B] flex items-end text-stroke-white-medium font-extrabold text-3xl not-italic">
-							IIITDM Jabalpur
+						<div className="text-white text-stroke-brand-thick font-extrabold text-5xl">@ </div>
+						<address className="text-blue-300 text-stroke-brand-thick font-extrabold text-5xl">
+							SRCAS Camps
 						</address>
 					</div>
 				</FadeInView>
@@ -204,8 +223,8 @@ const Hero = () => {
 					</Link>
 				</div>
 
-
-				<div className="absolute lg:w-[29vw] md:w-[42vw] sm:w-[53vw] w-[83vw] h-full right-10">
+				{/* Pro-Club logo */}
+				{/* <div className="absolute lg:w-[29vw] md:w-[42vw] sm:w-[53vw] w-[83vw] h-full right-10">
 					<Image
 						src="/tpc_and_iiit_logo.svg"
 						alt="TPC and IIITDM Jabalpur logos"
@@ -213,7 +232,7 @@ const Hero = () => {
 						className="object-contain object-right"
 						priority
 					/>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

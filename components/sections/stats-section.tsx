@@ -26,11 +26,7 @@ async function StatsSection() {
   ];
 
   return (
-    <section className="relative h-[50vh] md:h-[60vh] lg:h-[80vh] max-h-[90vh] w-full overflow-visible bg-black -mb-40 max-sm:-mb-10"
-      style={{
-        backgroundImage:"url(/stats-bg.svg)"
-      }}
-    >
+    <section className="relative h-[50vh] md:h-[60vh] lg:h-[80vh] max-h-[90vh] w-full overflow-visible bg-gradient-to-b from-white to-[#F0F7FF] -mb-40 max-sm:-mb-10">
       <div className="w-full h-32 absolute top-[10vw] z-10">
         <Image
           src="/stats-upper-2.svg"
@@ -51,38 +47,38 @@ async function StatsSection() {
       </div> */}
 
       <div className="relative z-20 size-full flex justify-center items-center px-4 font-kanit">
-      <FadeInView delay={0.2}>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 md:gap-10 max-w-7xl w-full">
-          {stats.map((stat, i) => (
-            <div key={i} className="flex flex-col items-center text-center">
-              {/* Number */}
-              <div
-                className="
-                text-white
+        <FadeInView delay={0.2}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 md:gap-10 max-w-7xl w-full">
+            {stats.map((stat, i) => (
+              <div key={i} className="flex flex-col items-center text-center">
+                {/* Number */}
+                <div
+                  className="
+                text-[#005CAA]
                 text-stroke-number
-                [-webkit-text-stroke:8px_#62009b]
-                md:[-webkit-text-stroke:14px_#62009b]
+                [-webkit-text-stroke:8px_#003366]
+                md:[-webkit-text-stroke:14px_#003366]
                 
                 font-extrabold
                 text-[32px] md:text-[81px]
                 leading-none"
-              >
-                {stat.number}
-              </div>
+                >
+                  {stat.number}
+                </div>
 
-              {/* Label */}
-              <div className="mt-2 text-[#C259FF] font-[700] text-[15px] md:text-[24px]">
-                {stat.label}
-              </div>
+                {/* Label */}
+                <div className="mt-2 text-[#005CAA] font-[700] text-[15px] md:text-[24px]">
+                  {stat.label}
+                </div>
 
-              {/* Description */}
-              <p className="md:pt-5 pb-5 max-w-[137px] md:max-w-[241px] font-[700] text-[10px] md:text-[18px] text-[#9D00F7]">
-                {stat.description}
-              </p>
-            </div>
-          ))}
-        </div>
-    </FadeInView>
+                {/* Description */}
+                <p className="md:pt-5 pb-5 max-w-[137px] md:max-w-[241px] font-[700] text-[10px] md:text-[18px] text-[#003366]/70">
+                  {stat.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </FadeInView>
       </div>
     </section>
   );

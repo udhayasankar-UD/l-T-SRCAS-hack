@@ -211,8 +211,8 @@ const TitleSponsorCard = ({ name, logo, description, site }: { name: string; log
 					/>
 				</div>
 
-				<div className="bg-gradient-to-b border-12 rounded-2xl border-white from-[#9E00F9] to-[#7B00C7] px-14 pt-8 pb-10 flex flex-col font-kanit items-center text-center -mt-2">
-					<h3 className="text-6xl font-extrabold text-white mb-3 text-stroke-black-thick">
+				<div className="bg-gradient-to-b border-12 rounded-2xl border-white from-[#005CAA] to-[#003366] px-14 pt-8 pb-10 flex flex-col font-kanit items-center text-center -mt-2">
+					<h3 className="text-6xl font-extrabold text-white mb-3">
 						{name}
 					</h3>
 					<p className="text-white/90 text-lg leading-tight">
@@ -356,7 +356,7 @@ export default function SponsorsPage() {
 				</div>
 			</div>
 
-			<div className="min-h-screen w-screen bg-gradient-to-b from-black relative to-[#34085B] flex flex-col items-center pt-16 pb-30">
+			<div className="min-h-screen w-screen bg-gradient-to-b from-white relative to-[#F0F7FF] flex flex-col items-center pt-16 pb-30">
 				<div className="w-full h-32 absolute z-10 bg-amber-300/300 -top-[14.9vw]">
 					<Image
 						src="/stats-upper-2.svg"
@@ -369,13 +369,13 @@ export default function SponsorsPage() {
 				</div>
 
 				<div className="w-full flex items-start justify-start sm:pt-50 pt-15 z-20 px-8 md:px-40">
-					<div className="flex items-center bg-[#3D1A5C] rounded-full border border-purple-700/50 h-10">
+					<div className="flex items-center bg-[#F0F7FF] rounded-full border border-[#005CAA]/30 h-10 shadow-md">
 						<button
 							onClick={() => setActiveTab("sponsors")}
 							aria-pressed={activeTab === "sponsors"}
 							className={`px-6 md:px-8 h-full rounded-full font-semibold text-sm md:text-lg transition-all duration-300 ${activeTab === "sponsors"
-								? "bg-[#9E00F9] text-white shadow-lg"
-								: "bg-transparent text-purple-300 hover:text-white"
+								? "bg-[#005CAA] text-white shadow-lg"
+								: "bg-transparent text-[#003366] hover:text-[#005CAA]"
 								}`}
 						>
 							Sponsors
@@ -384,8 +384,8 @@ export default function SponsorsPage() {
 							onClick={() => setActiveTab("inkind")}
 							aria-pressed={activeTab === "inkind"}
 							className={`px-6 md:px-8 h-full rounded-full font-semibold text-sm md:text-lg transition-all duration-300 ${activeTab === "inkind"
-								? "bg-[#9E00F9] text-white shadow-lg"
-								: "bg-transparent text-purple-300 hover:text-white"
+								? "bg-[#005CAA] text-white shadow-lg"
+								: "bg-transparent text-[#003366] hover:text-[#005CAA]"
 								}`}
 						>
 							In Kind Sponsors
