@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SRCAS × L&T Hackathon 2026",
     description: "Join us for 36 hours of coding, innovation, and fun at SRCAS, Coimbatore.",
-    url: 'https://srcas-lnt-hackathon.com',
+    // url: 'https://srcas-lnt-hackathon.com',
     siteName: 'SRCAS × L&T Hackathon',
     images: [
       {
